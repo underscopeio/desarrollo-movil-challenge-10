@@ -33,3 +33,4 @@ Para poder hacer algo ante una notificación (incluso si la aplicación ya se en
 
 1. Seguir la [guía de Expo](https://docs.expo.io/versions/latest/guides/push-notifications#3-handle-receiving-andor-selecting-the-notification-145)
 1. Usar un `alert` para mostrar el mensaje de la notificación, sin importar en qué parte de la aplicación estemos
+  > Notar que el mensaje necesitamos pasarlo en el _body_ de la notificación si queremos accederlo desde este handler
