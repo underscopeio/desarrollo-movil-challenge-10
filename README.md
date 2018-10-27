@@ -34,3 +34,9 @@ Para poder hacer algo ante una notificación (incluso si la aplicación ya se en
 1. Seguir la [guía de Expo](https://docs.expo.io/versions/latest/guides/push-notifications#3-handle-receiving-andor-selecting-the-notification-145)
 1. Usar un `alert` para mostrar el mensaje de la notificación, sin importar en qué parte de la aplicación estemos
   > Notar que el mensaje necesitamos pasarlo en el _body_ de la notificación si queremos accederlo desde este handler
+
+#### Identificando al usuario
+Para poder mostrar el nombre del usuario más adelante, vamos a pedirle ese dato al mismo. Para eso debemos:
+1. En la `AuthLoadingScreen` mostrar un `<TextInput>` donde el usuario ingrese su nombre y un `<Button>` de **"Guardar"**
+1. En el `onPress` del `<Button>` guardar el nombre del usuario en la collection `users` usando el `userId` como key y `{ name: 'El nombre' }` como valor.
+1. Una vez guardado el dato, navegar a `App`
