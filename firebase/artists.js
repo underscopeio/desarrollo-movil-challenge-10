@@ -4,7 +4,10 @@ export const favoritesCollection = db.collection('favoritos')
 
 export const setArtistAsFavorite = (artistId, esFavorito) => {
   const userId = auth.currentUser.uid
-  favoritesCollection.doc(artistId).set({
-    [userId]: esFavorito,
-  })
+  favoritesCollection.doc(artistId).set(
+    {
+      [userId]: esFavorito,
+    },
+    { merge: true }
+  )
 }
